@@ -22,13 +22,30 @@ git clone https://github.com/eliasezar27/test-menuwise.git
 pip install -r requirements.txt
 ```
 
-5. Open git bash and activate environment
+5. Install Playwright
+```bash
+playwright install
+```
+
+6. Open git bash and activate environment
 ```bash
 source venv/Scripts/activate <-for windows
 source venv/bin/activate <- macOS
 ```
 
-6. Run program
+7. Create a `.env` file that stores the site credentials for logging in.
+```bash
+echo '' > .env
+```
+
+Open the file and populate the following:
+
+```bash
+SITE_USER_NAME=<username>
+SITE_PASSWORD=<password>
+```
+
+8. Run program
 ```bash
 python src/app.py
 ```
